@@ -2,6 +2,12 @@
 
 Please be adviced that this oh binding is still experimental!
 
+![alt text][paperUIControl]
+![alt text][paperUIConfiguration]
+![alt text][paperUIConfigurationProperties]
+![alt text][paperUIConfiguration1]
+![alt text][paperUIConfiguration2]
+
 ## Supported Things
 
 ## Discovery
@@ -171,3 +177,9 @@ Items {
 ![alt text][grafana]
 
 [grafana]: https://github.com/amocoma/lgESSInverter/blob/master/ressources/grafana.png "Grafana"
+[paperUIControl]: https://github.com/amocoma/lgESSInverter/blob/master/ressources/paperUIControl.png "PaperUI #Control"
+[paperUIConfiguration]: https://github.com/amocoma/lgESSInverter/blob/master/ressources/paperUIConfiguration_0.png "PaperUI #Configuration"
+[paperUIConfiguration1]: https://github.com/amocoma/lgESSInverter/blob/master/ressources/paperUIConfiguration_1.png "PaperUI #Configuration"
+[paperUIConfiguration2]: https://github.com/amocoma/lgESSInverter/blob/master/ressources/paperUIConfiguration_2.png "PaperUI #Configuration"
+[paperUIConfigurationProperties]: https://github.com/amocoma/lgESSInverter/blob/master/ressources/paperUIConfigurationProperties.png "PaperUI #Configuration"
+
