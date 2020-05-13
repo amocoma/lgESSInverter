@@ -1,5 +1,7 @@
 # lgess Binding
 
+Please be adviced that this oh binding is still experimental!
+
 ## Supported Things
 
 ## Discovery
@@ -9,7 +11,7 @@ Not implemented right now!
 ## Binding Configuration
 
 ## Thing Configuration
-
+```
 Thing lginverter:D010KE1N211:YOUR_NAME "YOUR_NAME" @ "WHATEVER" [
     serial="YOUR_SERIAL",
     ip="YOUR_IP",
@@ -26,11 +28,12 @@ Thing lginverter:D010KE1N211:YOUR_NAME "YOUR_NAME" @ "WHATEVER" [
     useNetworkInformation=true,
     networkRefreshInternalInSeconds=120
 ]
-
+```
 ## Channels
 
-Please have a look into channel-group-type-[battery | common | home | network | systeminfo].xml under /src/main/resources/ESH-INF
+Please have a look into `channel-group-type-[battery | common | home | network | systeminfo].xml` under `/src/main/resources/ESH-INF`
 
+```
 Number:Energy               [YOUR_PREFIX]_generation_today
                             "Energy generation today [%.2f %unit%]"
                             {channel="lginverter:D010KE1N211:[YOUR_NAME]:common#generationToday"}
@@ -143,3 +146,4 @@ Switch                      [YOUR_PREFIX]_is_grid_feedin
 Switch                      [YOUR_PREFIX]_is_grid_consumption
                             "Is grid consumption"
                             {channel="lginverter:D010KE1N211:YOUR_NAME:home#isGridConsumption"}
+```
