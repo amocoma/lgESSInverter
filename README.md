@@ -168,6 +168,6 @@ Items {
 }
 ```
 
-![alt text][logo]
+![alt text][grafana]
 
-[logo]: https://github.com/amocoma/lgESSInverter/blob/master/ressources/grafana.png "Grafana"
+[grafana]: https://github.com/amocoma/lgESSInverter/blob/master/ressources/grafana.png "Grafana"
