@@ -18,7 +18,9 @@ Not implemented right now!
 
 ## Thing Configuration
 
-To get the password you can use [Postman][postman]. Please find [here](/blob/master/ressources/LGEnerVuESS.postman_collection.json) a collection export you can use.
+To get the password you can use [Postman][postman]. Please find [here](/blob/master/ressources/LGEnerVuESS.postman_collection.json) a collection export you can use. Before execution you have to disable "SSL certification verification" within the settings section of Postman!
+
+![alt text][postmanDisableSSLVerification]
 
 ```
 Thing lginverter:D010KE1N211:YOUR_NAME "YOUR_NAME" @ "WHATEVER" [
@@ -185,5 +187,6 @@ Items {
 [paperUIConfiguration1]: https://github.com/amocoma/lgESSInverter/blob/master/ressources/paperUIConfiguration_1.png "PaperUI #Configuration"
 [paperUIConfiguration2]: https://github.com/amocoma/lgESSInverter/blob/master/ressources/paperUIConfiguration_2.png "PaperUI #Configuration"
 [paperUIConfigurationProperties]: https://github.com/amocoma/lgESSInverter/blob/master/ressources/paperUIConfigurationProperties.png "PaperUI #Configuration"
+[postmanDisableSSLVerification]: https://github.com/amocoma/lgESSInverter/blob/master/ressources/postmanDisableSSLVerification.png "Postman Disable SSL verification"
 
-[postman]: https://www.mozilla.org
+[postman]: https://www.postman.com/
