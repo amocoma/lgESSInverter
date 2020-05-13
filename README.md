@@ -18,7 +18,7 @@ Not implemented right now!
 
 ## Thing Configuration
 
-To get the password you can use [Postman][postman]. Please find [here](/blob/master/ressources/LGEnerVuESS.postman_collection.json) a collection export you can use. Before execution you have to disable "SSL certification verification" within the settings section of Postman!
+To get the password you can use [Postman][postman]. Please find [here](ressources/LGEnerVuESS.postman_collection.json) a collection export you can use. Before execution you have to disable "SSL certification verification" within the settings section of Postman!
 
 ![alt text][postmanDisableSSLVerification]
 
