@@ -1,0 +1,77 @@
+{
+	"info": {
+		"_postman_id": "2120433c-60d1-426c-a070-6a8b1af62b56",
+		"name": "LG enerVu ESS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get password from ess",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Charset",
+						"value": "UTF-8",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"key\": \"lgepmsuser!@#\"}"
+				},
+				"url": {
+					"raw": "https://192.168.23.1/v1/user/setting/read/password",
+					"protocol": "https",
+					"host": [
+						"192",
+						"168",
+						"23",
+						"1"
+					],
+					"path": [
+						"v1",
+						"user",
+						"setting",
+						"read",
+						"password"
+					]
+				},
+				"description": "Please connet with your ESS directly over the WLAN the ESS is providing!"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "e12a7976-5118-40fa-80fc-389361533cc0",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "2318f0f1-d2b6-4d1e-99c0-879610b784a1",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
