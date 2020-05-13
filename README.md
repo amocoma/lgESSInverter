@@ -17,6 +17,9 @@ Not implemented right now!
 ## Binding Configuration
 
 ## Thing Configuration
+
+To get the password you can use [Postman][postman]. Please find [here](/blob/master/ressources/LGEnerVuESS.postman_collection.json) a collection export you can use.
+
 ```
 Thing lginverter:D010KE1N211:YOUR_NAME "YOUR_NAME" @ "WHATEVER" [
     serial="YOUR_SERIAL",
@@ -183,3 +186,4 @@ Items {
 [paperUIConfiguration2]: https://github.com/amocoma/lgESSInverter/blob/master/ressources/paperUIConfiguration_2.png "PaperUI #Configuration"
 [paperUIConfigurationProperties]: https://github.com/amocoma/lgESSInverter/blob/master/ressources/paperUIConfigurationProperties.png "PaperUI #Configuration"
 
+[postman]: https://www.mozilla.org
