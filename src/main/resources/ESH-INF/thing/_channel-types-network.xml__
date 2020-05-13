@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<thing:thing-descriptions bindingId="lginverter"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:thing="https://openhab.org/schemas/thing-description/v1.0.0"
+	xsi:schemaLocation="https://openhab.org/schemas/thing-description/v1.0.0 https://openhab.org/schemas/thing-description-1.0.0.xsd">
+
+	<!-- 
+		"network": {
+			"type": "wired",
+			"setting": "auto",
+			"ip": "192.168.2.149",
+			"mask": "255.255.252.0",
+			"gateway": "192.168.1.1",
+			"dns": "192.168.1.1",
+			"connected": "internet_connected"
+		},
+	-->
+
+	<!-- "type": "wired" -->
+	<channel-type id="networkType" advanced="true">
+		<item-type>String</item-type>
+		<label>Network Type</label>
+		<description>The network type</description>
+		<category>Inverter</category>
+		<state readOnly="true"/>
+	</channel-type>
+
+	<!-- "setting": "auto" -->
+	<channel-type id="networkSettings" advanced="true">
+		<item-type>String</item-type>
+		<label>Network Settings</label>
+		<description>The network Settings</description>
+		<category>Inverter</category>
+		<state readOnly="true"/>
+	</channel-type>
+
+	<!-- 
+		"ip": "192.168.2.149"
+		"mask": "255.255.252.0" 
+		"gateway": "192.168.1.1"
+		"dns": "192.168.1.1"
+	-->
+	<channel-type id="networkIp" advanced="true">
+		<item-type>String</item-type>
+		<label>Network IP Address</label>
+		<description>IP address of the inverter</description>
+		<category>Inverter</category>
+		<state readOnly="true"/>
+	</channel-type>
+
+	<!-- "connected": "internet_connected" -->
+	<channel-type id="networkConnected" advanced="true">
+		<item-type>Switch</item-type>
+		<label>Network Internet Connection</label>
+		<description>Network Internet Connection</description>
+		<category>Inverter</category>
+		<state readOnly="true"/>
+	</channel-type>
+</thing:thing-descriptions>

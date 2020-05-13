@@ -1,0 +1,20 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - DiscoverServices",
+            "request": "launch",
+            "mainClass": "org.openhab.binding.lginverter.internal.discovery.DiscoverServices",
+            "projectName": "org.openhab.binding.lgess"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Attach) - openHAB",
+            "request": "attach",
+            "hostName": "localhost",
+            "port": 5005,
+            "preLaunchTask": "Build"
+        }
+    ]
+}

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<thing:thing-descriptions bindingId="lginverter"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:thing="https://openhab.org/schemas/thing-description/v1.0.0"
+	xsi:schemaLocation="https://openhab.org/schemas/thing-description/v1.0.0 https://openhab.org/schemas/thing-description-1.0.0.xsd">
+    <channel-group-type id="battery" advanced="true">
+        <label>Battery API</label>
+        <description>description #TBD</description>
+        <category>Energy</category>
+        <channels>
+            <channel id="winterSetting" typeId="switch">
+                <label>Winter Setting</label>
+                <description>Battery Winter Setting</description>
+            </channel>
+            <channel id="winterStatus" typeId="switch">
+                <label>Winter Status</label>
+                <description>Battery Winter Status</description>
+            </channel>
+            <channel id="backupSetting" typeId="switch">
+                <label>Backup Setting</label>
+                <description>Battery Backup Setting</description>
+            </channel>
+            <channel id="backupStatus" typeId="switch">
+                <label>Backup Status</label>
+                <description>Battery Backup Status</description>
+            </channel>
+
+            <channel id="algSetting" typeId="switch">
+                <label>ALG Setting</label>
+                <description>ALG Setting</description>
+            </channel>
+            <channel id="safetySOC" typeId="percent">
+                <label>Safety SOC</label>
+                <description>Battery Safety SOC</description>
+            </channel>
+            <channel id="backupSOC" typeId="percent">
+                <label>Backup SOC</label>
+                <description>Battery Backup SOC</description>
+            </channel>
+            <channel id="startDate" typeId="string">
+                <label>Start Date</label>
+                <description>Battery Start Date</description>
+            </channel>
+            <channel id="stopDate" typeId="string">
+                <label>Stop Date</label>
+                <description>Battery Stop Date</description>
+            </channel>
+        </channels>
+    </channel-group-type>
+</thing:thing-descriptions>

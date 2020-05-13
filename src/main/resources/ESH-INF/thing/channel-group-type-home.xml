@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<thing:thing-descriptions bindingId="lginverter"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:thing="https://openhab.org/schemas/thing-description/v1.0.0"
+	xsi:schemaLocation="https://openhab.org/schemas/thing-description/v1.0.0 https://openhab.org/schemas/thing-description-1.0.0.xsd">
+    <channel-group-type id="home" advanced="true">
+        <label>Home API</label>
+        <description>description #TBD</description>
+        <category>Energy</category>
+        <channels>
+            <!-- STATISTIC -->
+            <channel id="statPcsPVTotalPower" typeId="power">
+                <label>PCS PV Total Power</label>
+                <description>Statistic Power Conversion Station (PCS) PV total power</description>
+            </channel>
+            <channel id="statBatteryConversionPower" typeId="power">
+                <label>Battery Conversion Power</label>
+                <description>Statistic battery conversion power</description>
+            </channel>
+            <channel id="statBatteryUse" typeId="string">
+                <label>Battery Use</label>
+                <description>Statistic battery use</description>
+            </channel>
+            <channel id="statBatteryStatus" typeId="switch">
+                <label>Battery Status</label>
+                <description>Statistic battery status</description>
+            </channel>
+            <channel id="statBatteryUserSOC" typeId="percent">
+                <label>Battery User SOC</label>
+                <description>Statistic battery user SOC</description>
+            </channel>
+            <channel id="statBatteryLoadPower" typeId="power">
+                <label>Battery Load Power</label>
+                <description>Statistic battery load power</description>
+            </channel>
+            <channel id="statLoadPowerUI" typeId="power">
+                <label>Battery Load Power UI</label>
+                <description>Statistic battery load power UI</description>
+            </channel>
+            <channel id="statACPowerOutput" typeId="power">
+                <label>AC Power Output</label>
+                <description>Statistic AC power output</description>
+            </channel>
+            <channel id="statLoadToday" typeId="power">
+                <label>Load Today</label>
+                <description>Statistic load today</description>
+            </channel>
+            <channel id="statLoadPower" typeId="power">
+                <label>Load Power</label>
+                <description>Statistic load power</description>
+            </channel>
+            <channel id="statSelfConsumptionToday" typeId="percent">
+                <label>Self Consumption Today</label>
+                <description>Statistic current self consumption today</description>
+            </channel>
+            <channel id="statPVGeneration" typeId="energy">
+                <label>PV Energy Generation</label>
+                <description>Statistic PV generation</description>
+            </channel>
+            <channel id="statGridFeedIn" typeId="energy">
+                <label>Grid Feed-In Energy</label>
+                <description>Statistic PV generation</description>
+            </channel>
+            <!-- DIRECTION -->
+            <channel id="isDirectConsumption" typeId="switch">
+                <label>Is Direct Consuming</label>
+                <description>Indicates if PV is directly consumed</description>
+            </channel>
+            <channel id="isBatteryCharging" typeId="switch">
+                <label>Is Battery Charging</label>
+                <description>Indicates if the battery is charging</description>
+            </channel>
+            <channel id="isBatteryDischarging" typeId="switch">
+                <label>Is Battery Discharging</label>
+                <description>Indicates if the battery is discharging</description>
+            </channel>
+            <channel id="isGridFeedIn" typeId="switch">
+                <label>Is Grid Feed-In</label>
+                <description>Indicates if energy is feeded into the grid</description>
+            </channel>
+            <channel id="isGridConsumption" typeId="switch">
+                <label>Is Grid Consumption</label>
+                <description>Indicates if energy is consumed from the grid</description>
+            </channel>
+            <channel id="isBatteryChargingFromGrid" typeId="switch">
+                <label>Is Battery Charging From Grid</label>
+                <description>Indicates if battery is charged from grid</description>
+            </channel>
+            <channel id="isBatteryDischargingToGrid" typeId="switch">
+                <label>Is Battery Discharging From Grid</label>
+                <description>Indicates if battery is charged from grid</description>
+            </channel>
+            <!-- OPERATION -->
+            <channel id="operationStatus" typeId="string">
+                <label>Operation Status</label>
+                <description>Operation status</description>
+            </channel>
+            <channel id="operationMode" typeId="string">
+                <label>Operation Mode</label>
+                <description>Operation mode</description>
+            </channel>
+            <channel id="pcsStandby" typeId="string">
+                <label>PCS Standby</label>
+                <description>Power Conversion Station (PCS) standby</description>
+            </channel>
+            <channel id="modeWinter" typeId="switch">
+                <label>Winter Status</label>
+                <description>Winter status</description>
+            </channel>
+            <channel id="modeBackup" typeId="switch">
+                <label>Backup Status</label>
+                <description>Backup status</description>
+            </channel>
+            <channel id="pcsStatus" typeId="string">
+                <label>PCS Status</label>
+                <description>PCS status</description>
+            </channel>
+            <!-- HEATPUMP -->
+            <channel id="heatpumpActivate" typeId="switch">
+                <label>Heatpump Activate</label>
+                <description>Heatpump activate</description>
+            </channel>
+            <channel id="heatpumpTemperature" typeId="string">
+                <label>Heatpump Current Temperature</label>
+                <description>Heatpump current remperature</description>
+            </channel>
+            <channel id="heatpumpEnable" typeId="switch">
+                <label>Heatpump Enable</label>
+                <description>Heatpump enable</description>
+            </channel>
+            <!-- EVCHARGER -->
+            <channel id="evChargerActivate" typeId="switch">
+                <label>EV Charger Activate</label>
+                <description>Electric Vehilce (EV) charger activate</description>
+            </channel>
+            <channel id="evChargerPower" typeId="power">
+                <label>EV Charger Power</label>
+                <description>Electric Vehilce (EV) charger power</description>
+            </channel>
+            <!-- ROOT -->
+            <channel id="gridWaitingTime" typeId="seconds">
+                <label>Grid Waiting Time</label>
+                <description>Grid waiting time</description>
+            </channel>
+        </channels>
+    </channel-group-type>
+</thing:thing-descriptions>

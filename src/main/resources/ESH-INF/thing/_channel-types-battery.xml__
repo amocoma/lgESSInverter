@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<thing:thing-descriptions bindingId="lginverter"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:thing="https://openhab.org/schemas/thing-description/v1.0.0"
+	xsi:schemaLocation="https://openhab.org/schemas/thing-description/v1.0.0 https://openhab.org/schemas/thing-description-1.0.0.xsd">
+	<!-- 
+		{
+			"winter_setting": "off",
+			"winter_status": "off",
+			"backup_setting": "off",
+			"backup_status": "off",
+			"alg_setting": "on",
+			"safety_soc": "20",
+			"backup_soc": "30",
+			"startdate": "1101",
+			"stopdate": "0228"
+		}
+	-->
+
+	<!-- "winter_setting": "off" -->
+	<channel-type id="batteryBackupSetting" advanced="true">
+		<item-type>Switch</item-type>
+		<label>Battery Winter Setting</label>
+		<description>Battery Winter Setting</description>
+		<category>Battery</category>
+		<state readOnly="true"/>
+	</channel-type>
+
+	<!-- "winter_status": "off" -->
+	<channel-type id="batteryWinterStatus" advanced="true">
+		<item-type>Switch</item-type>
+		<label>Battery Winter Status</label>
+		<description>Battery Winter Status</description>
+		<category>Battery</category>
+		<state readOnly="true"/>
+	</channel-type>
+	
+	<!-- "backup_setting": "off" -->
+	<channel-type id="batteryBackupSetting" advanced="true">
+		<item-type>Switch</item-type>
+		<label>Battery Backup Setting</label>
+		<description>Battery Backup Setting</description>
+		<category>Battery</category>
+		<state readOnly="true"/>
+	</channel-type>	
+	
+	<!-- "backup_status": "off" -->
+	<channel-type id="batteryBackupStatus" advanced="true">
+		<item-type>Switch</item-type>
+		<label>Battery Backup Status</label>
+		<description>Battery Backup Status</description>
+		<category>Battery</category>
+		<state readOnly="true"/>
+	</channel-type>
+
+	<!-- "alg_setting": "on" -->
+	<channel-type id="batteryALG" advanced="true">
+		<item-type>Switch</item-type>
+		<label>Battery ALG Setting</label>
+		<description>Battery ALG Setting</description>
+		<category>Battery</category>
+		<state readOnly="true"/>
+	</channel-type>
+	<!--
+		"safety_soc": "20"
+		"backup_soc": "30"
+	-->
+	<channel-type id="batterySOC" advanced="true">
+		<item-type>Number:Dimensionless</item-type>
+		<label>Battery SOC</label>
+		<description>Battery SOC</description>
+		<category>Battery</category>
+		<state readOnly="true" pattern="%.2f %unit%"/>
+	</channel-type>
+
+	<!--
+		"startdate": "1101"
+		"stopdate": "0228"		 
+	-->
+	<channel-type id="systemBatteryDate" advanced="true">
+		<item-type>String</item-type>
+		<label>System Battery Start/Stop Date</label>
+		<description>System Battery Start/Stop Date</description>
+		<category>Battery</category>
+		<state readOnly="true"/>
+	</channel-type>
+
+
+
+</thing:thing-descriptions>

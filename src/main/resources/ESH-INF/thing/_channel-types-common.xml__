@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<thing:thing-descriptions bindingId="lginverter"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:thing="https://openhab.org/schemas/thing-description/v1.0.0"
+	xsi:schemaLocation="https://openhab.org/schemas/thing-description/v1.0.0 https://openhab.org/schemas/thing-description-1.0.0.xsd">
+
+	<!--
+	"PV": {
+        "brand": "LGE-SOLAR",
+        "capacity": "9500",
+        "pv1_voltage": "20.100000",
+        "pv2_voltage": "20.700001",
+        "pv3_voltage": "20.200001",
+        "pv1_power": "0",
+        "pv2_power": "0",
+        "pv3_power": "0",
+        "pv1_current": "0.000000",
+        "pv2_current": "0.000000",
+        "pv3_current": "0.000000",
+        "today_pv_generation_sum": "52748",
+        "today_month_pv_generation_sum": "483458"
+	  }
+	-->
+
+	<!-- "brand": "LGE-SOLAR" -->
+	<channel-type id="pvBrand" advanced="true">
+		<item-type>String</item-type>
+		<label>PV : Brand</label>
+		<description>Brand of the photovoltaic modules</description>
+		<category>Energy</category>
+		<state readOnly="true"/>
+	</channel-type>
+
+	<!-- "capacity": "9500" -->
+	<channel-type id="pvCapacity">
+		<item-type>Number:Energy</item-type>
+		<label>PV : Capacity</label>
+		<description>Capacity of photovoltaic modules</description>
+		<category>Energy</category>
+		<state readOnly="true" pattern="%.2f %unit%" />
+	</channel-type>
+
+	<!-- 
+        "pv1_current": "0.000000"
+        "pv2_current": "0.000000"
+        "pv3_current": "0.000000"
+	-->
+	<channel-type id="pvAmperage" advanced="true">
+		<item-type>Number:ElectricCurrent</item-type>
+		<label>PV : Amperage</label>
+		<description>Current amperage of photovoltaic string</description>
+		<category>Energy</category>
+		<state readOnly="true" pattern="%.2f %unit%" />
+	</channel-type>
+	<!--
+		"pv1_power": "0"
+        "pv2_power": "0"
+		"pv3_power": "0"
+	-->
+	<channel-type id="pvPower">
+		<item-type>Number:Energy</item-type>
+		<label>PV : Power</label>
+		<description>Current power of photovoltaic string</description>
+		<category>Energy</category>
+		<state readOnly="true" pattern="%.2f %unit%" />
+	</channel-type>
+
+	<!--
+		"pv1_voltage": "20.100000"
+		"pv2_voltage": "20.700001"
+		"pv3_voltage": "20.200001"
+	-->
+	<channel-type id="pvVoltage">
+		<item-type>Number:ElectricPotential</item-type>
+		<label>PV : Voltage</label>
+		<description>Current voltage of photovoltaic string</description>
+		<category>Energy</category>
+		<state readOnly="true" pattern="%.2f %unit%" />
+	</channel-type>
+
+	<!-- 
+		"today_pv_generation_sum": "52748",
+		"today_month_pv_generation_sum": "483458"
+	-->
+	<channel-type id="pvGeneration">
+		<item-type>Number:Energy</item-type>
+		<label>PV : Generation</label>
+		<description>PV generation over specific period</description>
+		<category>Energy</category>
+		<state readOnly="true" pattern="%.2f %unit%" />
+	</channel-type>
+
+	<!-- 
+      "BATT": {
+        "status": "4",
+        "soc": "0",
+        "dc_power": "0",
+        "winter_setting": "off",
+        "winter_status": "off",
+        "safety_soc": "20",
+        "backup_setting": "off",
+        "backup_status": "off",
+        "backup_soc": "30",
+        "today_batt_discharge_enery": "0",
+        "today_batt_charge_energy": "0",
+        "month_batt_charge_energy": "0",
+        "month_batt_discharge_energy": "0"
+	  },
+	-->
+
+	<!-- "status": "4" -->
+	<channel-type id="batteryStatus" advanced="true">
+		<item-type>String</item-type>
+		<label>Battery : Status</label>
+		<description>The battery status</description>
+		<category>Battery</category>
+		<state readOnly="true"/>
+	</channel-type>
+
+	<!-- "dc_power": "0" -->
+	<channel-type id="batteryDCPower" advanced="true">
+		<item-type>Number:Energy</item-type>
+		<label>Battery : DC Power</label>
+		<description>The battery DC power</description>
+		<category>Battery</category>
+		<state readOnly="true" pattern="%.2f %unit%" />
+	</channel-type>
+
+	<!-- "winter_setting": "off" -->
+	<channel-type id="batteryWinterSetting" advanced="true">
+		<item-type>Switch</item-type>
+		<label>Battery : Winter Setting</label>
+		<description>The battery winter setting</description>
+		<category>Snow</category>
+		<state readOnly="true"/>
+	</channel-type>
+
+	<!-- "winter_status": "off" -->
+	<channel-type id="batteryWinterStatus" advanced="true">
+		<item-type>Switch</item-type>
+		<label>Battery : Winter Status</label>
+		<description>The battery winter status</description>
+		<category>Snow</category>
+		<state readOnly="true"/>
+	</channel-type>
+
+	<!-- "backup_setting": "off" -->
+	<channel-type id="batteryBackupSetting" advanced="true">
+		<item-type>Switch</item-type>
+		<label>Battery : Backup Setting</label>
+		<description>The battery backup setting</description>
+		<category>Battery</category>
+		<state readOnly="true"/>
+	</channel-type>
+
+	<!-- "backup_status": "off" -->
+	<channel-type id="batteryBackupStatus" advanced="true">
+		<item-type>Switch</item-type>
+		<label>Battery : Backup Status</label>
+		<description>The battery backup status</description>
+		<category>Battery</category>
+		<state readOnly="true"/>
+	</channel-type>
+
+	<!--
+		"soc": "0"
+	  	"safety_soc": "20"
+	  	"backup_soc": "30"
+	-->
+	<channel-type id="batterySOC" advanced="true">
+		<item-type>Number</item-type>
+		<label>Battery : SOC</label>
+		<description>Diverse battery SOC states</description>
+		<category>Battery</category>
+		<state readOnly="true" pattern="%.2f %unit%"/>
+	</channel-type>
+
+	<!-- 
+		"today_batt_discharge_enery": "0"
+        "today_batt_charge_energy": "0"
+        "month_batt_charge_energy": "0"
+        "month_batt_discharge_energy": "0"		
+	-->
+	<channel-type id="batteryEnergy" advanced="true">
+		<item-type>Number:Energy</item-type>
+		<label>Battery : Energy</label>
+		<description>Diverse battery energy status</description>
+		<category>Battery</category>
+		<state readOnly="true" pattern="%.2f %unit%" />
+	</channel-type>
+
+	<!-- channel-type id="batAlgSetting" advanced="true">
+		<item-type>Switch</item-type>
+		<label>Battery ALG Setting</label>
+		<description>The battery ALG Setting</description>
+		<category>Battery</category>
+		<state readOnly="true"/>
+	</channel-type -->
+
+	<!--
+		"GRID": {
+			"active_power": "492.619995",
+			"a_phase": "227.000000",
+			"freq": "50.000000",
+			"today_grid_feed_in_energy": "45191",
+			"today_grid_power_purchase_energy": "6604",
+			"month_grid_feed_in_energy": "390227",
+			"month_grid_power_purchase_energy": "118909"
+		},		 
+	-->
+	
+	<!-- "active_power": "492.619995" -->
+	<channel-type id="gridActivePower" advanced="true">
+		<item-type>Number:Energy</item-type>
+		<label>Grid : active Power</label>
+		<description>Grid : active Power</description>
+		<category>Energy</category>
+		<state readOnly="true" pattern="%.2f %unit%"/>
+	</channel-type>
+
+	<!-- "a_phase": "227.000000" -->
+	<channel-type id="gridAPhase" advanced="true">
+		<item-type>Number:Energy</item-type>
+		<label>Grid : A Phase</label>
+		<description>Grid : A Phase</description>
+		<category>Energy</category>
+		<state readOnly="true" pattern="%.2f %unit%"/>
+	</channel-type>
+
+	<!-- "freq": "50.000000" -->
+	<channel-type id="gridFrequency" advanced="true">
+		<item-type>Number:Frequency</item-type>
+		<label>Grid : Frequency</label>
+		<description>Grid : Frequency</description>
+		<category>Energy</category>
+		<state readOnly="true" pattern="%.2f %unit%"/>
+	</channel-type>
+	<!--
+		"today_grid_feed_in_energy": "45191"
+		"today_grid_power_purchase_energy": "6604"
+		"month_grid_feed_in_energy": "390227"
+		"month_grid_power_purchase_energy": "118909"
+	-->
+	<channel-type id="gridEnergy" advanced="true">
+		<item-type>Number:Energy</item-type>
+		<label>Grid : Energy</label>
+		<description>Grid : Energy</description>
+		<category>Energy</category>
+		<state readOnly="true" pattern="%.2f %unit%" />
+	</channel-type>
+
+	<!--
+		"LOAD": {
+			"load_power": "486",
+			"today_load_consumption_sum": "14161",
+			"today_pv_direct_consumption_enegy": "7557",
+			"today_batt_discharge_enery": "0",
+			"today_grid_power_purchase_energy": "6604",
+			"month_load_consumption_sum": "212140",
+			"month_pv_direct_consumption_energy": "93231",
+			"month_batt_discharge_energy": "0",
+			"month_grid_power_purchase_energy": "118909"
+		},
+	-->
+
+	<!-- "load_power": "486" -->
+	<channel-type id="loadPower" advanced="true">
+		<item-type>Number:Energy</item-type>
+		<label>Load : Power</label>
+		<description>Load : Power</description>
+		<category>Energy</category>
+		<state readOnly="true" pattern="%.2f %unit%"/>
+	</channel-type>
+	<!--
+		"today_pv_direct_consumption_enegy": "7557",
+		"today_batt_discharge_enery": "0",
+		"today_grid_power_purchase_energy": "6604",
+		"month_load_consumption_sum": "212140",
+		"month_pv_direct_consumption_energy": "93231",
+		"month_batt_discharge_energy": "0",
+		"month_grid_power_purchase_energy": "118909"		
+	-->
+	<channel-type id="loadEnergy" advanced="true">
+		<item-type>Number:Energy</item-type>
+		<label>Load : Energy</label>
+		<description>Load : Energy</description>
+		<category>Energy</category>
+		<state readOnly="true" pattern="%.2f %unit%"/>
+	</channel-type>
+
+	<!--
+		"PCS": {
+			"today_self_consumption": "14.3",
+			"month_co2_reduction_accum": "343255",
+			"today_pv_generation_sum": "52748",
+			"month_pv_generation_sum": "483458",
+			"today_grid_feed_in_energy": "45191",
+			"month_grid_feed_in_energy": "390227",
+			"pcs_stauts": "1",
+			"feed_in_limitation": "70",
+			"operation_mode": "1"
+		}
+	-->
+
+	<!-- "today_self_consumption": "14.3" -->
+	<channel-type id="pcsSelfConsumption" advanced="true">
+		<item-type>Number:Dimensionless</item-type>
+		<label>PCS : Self Consumption Rate</label>
+		<description>Percentage of electricity demand covered by photovoltaics today</description>
+		<category>Energy</category>
+		<state readOnly="true" pattern="%.2f %unit%"/>
+	</channel-type>
+	<!-- 		
+		"today_pv_generation_sum": "52748",
+		"month_pv_generation_sum": "483458",
+		"today_grid_feed_in_energy": "45191",
+		"month_grid_feed_in_energy": "390227",
+	-->
+	<channel-type id="pcsEnergy" advanced="true">
+		<item-type>Number:Energy</item-type>
+		<label>PCS : Energy</label>
+		<description>PCS Energy</description>
+		<category>Energy</category>
+		<state readOnly="true" pattern="%.2f %unit%"/>
+	</channel-type>
+
+	<!-- "month_co2_reduction_accum": "343255" -->
+	<channel-type id="pcsCO2Reduction" advanced="true">
+		<item-type>Number:Energy</item-type>
+		<label>PCS : CO2 Savings</label>
+		<description>Savings in Co2 emissions</description>
+		<category>CarbonDioxide</category>
+		<state readOnly="true" pattern="%.2f %unit%"/>
+	</channel-type>
+
+	<!-- "pcs_stauts": "1" -->
+	<channel-type id="pcsStatus" advanced="true">
+		<item-type>String</item-type>
+		<label>PCS : Status</label>
+		<description>PCS Status</description>
+		<category>Energy</category>
+		<state readOnly="true" pattern="%.2f %unit%" />
+	</channel-type>
+
+	<!-- "feed_in_limitation": "70" -->
+	<channel-type id="pcsFeedInLimitation" advanced="true">
+		<item-type>Number:Dimensionless</item-type>
+		<label>PCS : Feed-in Limit Relative</label>
+		<description>Permitted feed-in quantity as relative value as specified by the energy supplier</description>
+		<category>Energy</category>
+		<state readOnly="true" pattern="%.2f %unit%" />
+	</channel-type>
+
+	<!-- "operation_mode": "1" -->
+	<channel-type id="pcsOperationMode" advanced="true">
+		<item-type>String</item-type>
+		<label>PCS : Operation Mode</label>
+		<description>PCS Operation Mode</description>
+		<category>Energy</category>
+		<state readOnly="true" />
+	</channel-type>
+</thing:thing-descriptions>

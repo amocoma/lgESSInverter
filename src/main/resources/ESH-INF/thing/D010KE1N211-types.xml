@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<thing:thing-descriptions bindingId="lginverter"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:thing="https://openhab.org/schemas/thing-description/v1.0.0"
+	xsi:schemaLocation="https://openhab.org/schemas/thing-description/v1.0.0 https://openhab.org/schemas/thing-description-1.0.0.xsd">
+	<thing-type id="D010KE1N211">
+		<label>Model D010KE1N211 | LG ESS 10</label>
+		<description>Bindings for the LG ESS 10 | Model D010KE1N211 solar inverter</description>
+		<category>Energy</category>
+		<channel-groups>
+			<channel-group id="common" typeId="common"/>
+			<channel-group id="systeminfo" typeId="systemInfo"/>
+			<channel-group id="network" typeId="network"/>
+			<channel-group id="battery" typeId="battery" />
+			<channel-group id="home" typeId="home"/>
+		</channel-groups>
+		<properties>
+			<property name="vendor">LG</property>
+			<property name="ip"></property>
+		</properties>
+		<config-description-ref uri="thing-type:lginverter_config" />
+	</thing-type>
+</thing:thing-descriptions>

@@ -1,0 +1,155 @@
+{
+    "network": {
+      "type": "wired",
+      "setting": "auto",
+      "ip": "192.168.2.149",
+      "mask": "255.255.252.0",
+      "gateway": "192.168.1.1",
+      "dns": "192.168.1.1",
+      "connected": "internet_connected"
+    },
+    "systeminfo": {
+      "pms": {
+        "model": "D010KE1N211",
+        "serialno": "DE1907BKRE01633D",
+        "ac_input_power": "13500",
+        "ac_output_power": "10",
+        "install_date": "2020-03-05"
+      },
+      "batt": {
+        "capacity": "0",
+        "install_date": "2020-03-05"
+      },
+      "version": {
+        "pms_version": "10.05.7063",
+        "pms_build_date": "2020-02-19 R681",
+        "pcs_version": "LG P2 02.00.01.00 R37 1.33.3",
+        "bms_version": "BMS 00.00.00.00 / DCDC 0K.0.0 ",
+        "bms_unit1_version": "BMS 00.00.00.00 / DCDC 0K.0.0 ",
+        "bms_unit2_version": "BMS 00.00.00.00 / DCDC 0K.0.0 "
+      }
+    },
+    "batt": {
+      "winter_setting": "off",
+      "winter_status": "off",
+      "backup_setting": "off",
+      "backup_status": "off",
+      "alg_setting": "on",
+      "safety_soc": "20",
+      "backup_soc": "30",
+      "startdate": "1101",
+      "stopdate": "0228"
+    },
+    "home": {
+      "statistics": {
+        "pcs_pv_total_power": "0",
+        "batconv_power": "0",
+        "bat_use": "0",
+        "bat_status": "off",
+        "bat_user_soc": "0.0",
+        "load_power": "534",
+        "load_power_for_ui": "534",
+        "ac_output_power": "10",
+        "load_today": "0.0",
+        "grid_power": "534",
+        "current_day_self_consumption": "85.5",
+        "current_pv_generation_sum": "6445",
+        "current_grid_feed_in_energy": "935"
+      },
+      "direction": {
+        "is_direct_consuming_": "0",
+        "is_battery_charging_": "0",
+        "is_battery_discharging_": "0",
+        "is_grid_selling_": "0",
+        "is_grid_buying_": "1",
+        "is_charging_from_grid_": "0",
+        "is_discharging_to_grid_": "0"
+      },
+      "operation": {
+        "status": "start",
+        "mode": "2",
+        "pcs_standbymode": "false"
+      },
+      "wintermode": {
+        "winter_status": "off",
+        "backup_status": "off"
+      },
+      "backupmode": "",
+      "pcs_fault": {
+        "pcs_status": "pcs_ok"
+      },
+      "heatpump": {
+        "heatpump_activate": "off",
+        "current_temp": "0",
+        "heatpump_enable": "off"
+      },
+      "evcharger": {
+        "ev_activate": "off",
+        "ev_power": "0"
+      },
+      "gridWaitingTime": "0"
+    },
+    "common": {
+      "PV": {
+        "brand": "LGE-SOLAR",
+        "capacity": "9500",
+        "pv1_voltage": "20.100000",
+        "pv2_voltage": "20.700001",
+        "pv3_voltage": "20.200001",
+        "pv1_power": "0",
+        "pv2_power": "0",
+        "pv3_power": "0",
+        "pv1_current": "0.000000",
+        "pv2_current": "0.000000",
+        "pv3_current": "0.000000",
+        "today_pv_generation_sum": "52748",
+        "today_month_pv_generation_sum": "483458"
+      },
+      "BATT": {
+        "status": "4",
+        "soc": "0",
+        "dc_power": "0",
+        "winter_setting": "off",
+        "winter_status": "off",
+        "safety_soc": "20",
+        "backup_setting": "off",
+        "backup_status": "off",
+        "backup_soc": "30",
+        "today_batt_discharge_enery": "0",
+        "today_batt_charge_energy": "0",
+        "month_batt_charge_energy": "0",
+        "month_batt_discharge_energy": "0"
+      },
+      "GRID": {
+        "active_power": "492.619995",
+        "a_phase": "227.000000",
+        "freq": "50.000000",
+        "today_grid_feed_in_energy": "45191",
+        "today_grid_power_purchase_energy": "6604",
+        "month_grid_feed_in_energy": "390227",
+        "month_grid_power_purchase_energy": "118909"
+      },
+      "LOAD": {
+        "load_power": "486",
+        "today_load_consumption_sum": "14161",
+        "today_pv_direct_consumption_enegy": "7557",
+        "today_batt_discharge_enery": "0",
+        "today_grid_power_purchase_energy": "6604",
+        "month_load_consumption_sum": "212140",
+        "month_pv_direct_consumption_energy": "93231",
+        "month_batt_discharge_energy": "0",
+        "month_grid_power_purchase_energy": "118909"
+      },
+      "PCS": {
+        "today_self_consumption": "14.3",
+        "month_co2_reduction_accum": "343255",
+        "today_pv_generation_sum": "52748",
+        "month_pv_generation_sum": "483458",
+        "today_grid_feed_in_energy": "45191",
+        "month_grid_feed_in_energy": "390227",
+        "pcs_stauts": "1",
+        "feed_in_limitation": "70",
+        "operation_mode": "1"
+      }
+    }
+  }

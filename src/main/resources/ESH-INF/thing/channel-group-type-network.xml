@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<thing:thing-descriptions bindingId="lginverter"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:thing="https://openhab.org/schemas/thing-description/v1.0.0"
+	xsi:schemaLocation="https://openhab.org/schemas/thing-description/v1.0.0 https://openhab.org/schemas/thing-description-1.0.0.xsd">
+    <channel-group-type id="network" advanced="true">
+        <label>Network API</label>
+        <description>description #TBD</description>
+        <category>Energy</category>
+        <channels>
+            <channel id="type" typeId="string">
+                <label>Type</label>
+                <description>Network type</description>
+            </channel>
+            <channel id="setting" typeId="string">
+                <label>Setting</label>
+                <description>Network setting</description>
+            </channel>
+            <channel id="ip" typeId="string">
+                <label>IP</label>
+                <description>Network ip adresss</description>
+            </channel>
+            <channel id="mask" typeId="string">
+                <label>Mask</label>
+                <description>Network mask adresss</description>
+            </channel>
+            <channel id="gateway" typeId="string">
+                <label>Gateway</label>
+                <description>Network gateway adresss</description>
+            </channel>
+            <channel id="dns" typeId="string">
+                <label>DNS</label>
+                <description>Network dns adresss</description>
+            </channel>
+            <channel id="connected" typeId="switch">
+                <label>Connected to Internet</label>
+                <description>Connetcted to internet</description>
+            </channel>
+        </channels>
+    </channel-group-type>
+</thing:thing-descriptions>

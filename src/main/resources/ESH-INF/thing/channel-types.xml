@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<thing:thing-descriptions bindingId="lginverter"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:thing="https://openhab.org/schemas/thing-description/v1.0.0"
+	xsi:schemaLocation="https://openhab.org/schemas/thing-description/v1.0.0 https://openhab.org/schemas/thing-description-1.0.0.xsd">
+    <channel-type id="string" advanced="true">
+        <item-type>String</item-type>
+        <label>String</label>
+        <description>A text representation</description>
+        <state readOnly="true"/>
+    </channel-type>
+    <channel-type id="kWp" advanced="true">
+        <item-type>Number:Energy</item-type>
+        <label>kWp</label>
+        <description>Kilo-Watt-Peak representation</description>
+        <state readOnly="true"  pattern="%.2f %unit%"/>
+    </channel-type>
+    <channel-type id="power" advanced="true">
+        <item-type>Number:Power</item-type>
+        <label>Power</label>
+        <description>Power representation</description>
+        <state readOnly="true" pattern="%.2f %unit%"/>
+    </channel-type>
+    <channel-type id="volt" advanced="true">
+        <item-type>Number:ElectricPotential</item-type>
+        <label>Volt</label>
+        <description>Kilo-Watt-Peak representation</description>
+        <state readOnly="true" pattern="%.2f %unit%"/>
+    </channel-type>
+    <channel-type id="ampere" advanced="true">
+        <item-type>Number:ElectricCurrent</item-type>
+        <label>Amperage</label>
+        <description>Kilo-Watt-Peak representation</description>
+        <state readOnly="true" pattern="%.2f %unit%"/>
+    </channel-type>
+    <channel-type id="energy" advanced="true">
+        <item-type>Number:Energy</item-type>
+        <label>Energy kwh/h</label>
+        <description>Energy representation</description>
+        <state readOnly="true" pattern="%.2f %unit%"/>
+    </channel-type>
+    <channel-type id="switch" advanced="true">
+        <item-type>Switch</item-type>
+        <label>Switch</label>
+        <description>Switch representation</description>
+        <state readOnly="true"/>
+    </channel-type>
+    <channel-type id="percent" advanced="true">
+        <item-type>Number:Dimensionless</item-type>
+        <label>Percent</label>
+        <description>Percentage representation</description>
+        <state readOnly="true" pattern="%.2f %unit%"/>
+    </channel-type>
+    <channel-type id="mass" advanced="true">
+        <item-type>Number:Mass</item-type>
+        <label>Mass</label>
+        <description>Mass representation</description>
+        <state readOnly="true" pattern="%.2f %unit%"/>
+    </channel-type>
+    <channel-type id="seconds" advanced="true">
+        <item-type>Number:Time</item-type>
+        <label>Seconds</label>
+        <description>Seconds representation</description>
+        <state readOnly="true" pattern="%.2f %unit%"/>
+    </channel-type>
+    <channel-type id="frequency" advanced="true">
+        <item-type>Number:Frequency</item-type>
+        <label>Frequency</label>
+        <description>Frequency representation</description>
+        <state readOnly="true" pattern="%.2f %unit%"/>
+    </channel-type>    
+</thing:thing-descriptions>

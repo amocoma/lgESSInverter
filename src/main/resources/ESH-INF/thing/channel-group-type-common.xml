@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<thing:thing-descriptions bindingId="lginverter"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:thing="https://openhab.org/schemas/thing-description/v1.0.0"
+	xsi:schemaLocation="https://openhab.org/schemas/thing-description/v1.0.0 https://openhab.org/schemas/thing-description-1.0.0.xsd">
+    <channel-group-type id="common">
+        <label>Common API</label>
+        <description>description #TBD</description>
+        <category>Energy</category>
+        <channels>
+            <channel id="pvBrand" typeId="string">
+                <label>PV Brand</label>
+                <description>Manufacturer of the photovoltaic modules</description>
+            </channel>
+            <channel id="pvCapacity" typeId="kWp">
+                <label>PV Capacity</label>
+                <description>Capacity of the photovoltaic modules</description>
+            </channel>
+            <channel id="pvString1Amperage" typeId="ampere">
+                <label>PV String 1 DC-Amperage</label>
+                <description>Current amperage of photovoltaic String 1</description>
+            </channel>
+            <channel id="pvString1Power" typeId="power">
+                <label>PV String 1 DC-Power</label>
+                <description>Current power of photovoltaic String 1</description>
+            </channel>
+            <channel id="pvString1Voltage" typeId="volt">
+                <label>PV String 1 DC-Voltage</label>
+                <description>Current voltage of photovoltaic String 1</description>
+            </channel>
+            <channel id="pvString2Amperage" typeId="ampere">
+                <label>PV String 2 DC-Amperage</label>
+                <description>Current amperage of photovoltaic String 2</description>
+            </channel>
+            <channel id="pvString2Power" typeId="power">
+                <label>PV String 2 DC-Power</label>
+                <description>Current power of photovoltaic String 2</description>
+            </channel>
+            <channel id="pvString2Voltage" typeId="volt">
+                <label>PV String 2 DC-Voltage</label>
+                <description>Current voltage of photovoltaic String 2</description>
+            </channel>
+            <channel id="pvString3Amperage" typeId="ampere">
+                <label>PV String 3 DC-Amperage</label>
+                <description>Current amperage of photovoltaic String 3</description>
+            </channel>
+            <channel id="pvString3Power" typeId="power">
+                <label>PV String 3 DC-Power</label>
+                <description>Current power of photovoltaic String 3</description>
+            </channel>
+            <channel id="pvString3Voltage" typeId="volt">
+                <label>PV String 3 DC-Voltage</label>
+                <description>Current voltage of photovoltaic String 3</description>
+            </channel>
+            <channel id="generationToday" typeId="energy">
+                <label>Energy Generation Today</label>
+                <description>Genertated energy today</description>
+            </channel>
+            <channel id="generationMonth" typeId="energy">
+                <label>Energy Generation this Month</label>
+                <description>Genertated energy this month</description>
+            </channel>
+            <channel id="batteryStatus" typeId="string">
+                <label>Battery Status</label>
+                <description>Represents the status (Charging/Discharging/Standby) of the battery</description>
+            </channel>
+            <channel id="batterySOC" typeId="percent">
+                <label>Battery SOC</label>
+                <description>Battery current SOC (state of charge) level</description>
+            </channel>
+            <channel id="batteryDCPower" typeId="power">
+                <label>Battery DC Power</label>
+                <description>Battery current output power</description>			
+            </channel>
+            <channel id="batteryWinterSetting" typeId="switch">
+                <label>Battery Winter Mode Setting</label>
+                <description>Shows winter mode setting of the battery</description>	
+            </channel>
+            <channel id="batteryWinterStatus" typeId="switch">
+                <label>Battery Winter Mode Status</label>
+                <description>BShows winter mode status of the battery</description>				
+            </channel>
+            <channel id="batterySafetySOC" typeId="percent">
+                <label>Battery Safty SOC</label>
+                <description>Safty SOC (state of charge) level of the battery</description>
+            </channel>
+            <channel id="batteryBackupSetting" typeId="switch">
+                <label>Battery Backup Mode Setting</label>
+                <description>Shows backup mode setting of the battery</description>	
+            </channel>
+            <channel id="batteryBackupStatus" typeId="switch">
+                <label>Battery Backup Mode Status</label>
+                <description>Shows backup mode status of the battery</description>	
+            </channel>
+            <channel id="batteryBackupSOC" typeId="percent">
+                <label>Battery Backup SOC</label>
+                <description>Backup SOC (state of charge) of the battery</description>
+            </channel>
+            <channel id="batteryDischargeToday" typeId="energy">
+                <label>Battery Discharge Today</label>
+                <description>Battery Amount of discharged energy to the battery today</description>
+            </channel>
+            <channel id="batteryChargeToday" typeId="energy">
+                <label>Battery Charge Today</label>
+                <description>Amount of charged energy to the battery today</description>
+            </channel>
+            <channel id="batteryDischargeMonth" typeId="energy">
+                <label>Battery Discharge Month</label>
+                <description>Amount of discharged energy to the battery this month</description>
+            </channel>
+            <channel id="batteryChargeMonth" typeId="energy">
+                <label>Battery Charge Month</label>
+                <description> Amount of charged energy to the battery this month</description>
+            </channel>
+            <channel id="gridActivePower" typeId="power">
+                <label>Current Grid Power</label>
+                <description>Current grid power</description>
+            </channel>
+            <channel id="gridAPhase" typeId="volt">
+                <label>Current Grid Voltage</label>
+                <description>Current grid voltage</description>
+            </channel>
+            <channel id="gridFrequency" typeId="frequency">
+                <label>Current Grid Frequency</label>
+                <description>Current grid frequency</description>
+            </channel>
+            <channel id="gridFeedInToday" typeId="energy">
+                <label>Grid Feed-in Energy Today</label>
+                <description>Feed-in to grid energy today</description>
+            </channel>
+            <channel id="gridConsumptionToday" typeId="energy">
+                <label>Grid Energy Consumption Today</label>
+                <description>Energy consumption from the grid today</description>
+            </channel>
+            <channel id="gridFeedInMonth" typeId="energy">
+                <label>Grid Feed-in Energy Month</label>
+                <description>Feed-in to grid energy this month</description>
+            </channel>
+            <channel id="gridConsumptionMonth" typeId="energy">
+                <label>Grid Energy Consumption Month</label>
+                <description>Energy consumption from the grid this month</description>
+            </channel>
+            <channel id="consumptionPower" typeId="power">
+                <label>Consumption Power</label>
+                <description>Current power consumed</description>				
+            </channel>
+            <channel id="consumptionToday" typeId="energy">
+                <label>Consumption Today</label>
+                <description>Amount of consumed energy today</description>
+            </channel>
+            <channel id="consumptionMonth" typeId="energy">
+                <label>Consumption Month</label>
+                <description>Amount of consumed energy this month</description>
+            </channel>
+            <channel id="pvConsumptionToday" typeId="energy">
+                <label>PV Consumption Today</label>
+                <description>Amount of energy directly consumed from PV today</description>
+            </channel>
+            <channel id="batteryConsumptionToday" typeId="energy">
+                <label>Battery Consumption Today</label>
+                <description>Amount of energy consumed from battery today</description>
+            </channel>
+            <channel id="pvConsumptionMonth" typeId="energy">
+                <label>PV Consumption Month</label>
+                <description>Amount of energy directly consumed from PV this month</description>
+            </channel>
+            <channel id="batteryConsumptionMonth" typeId="energy">
+                <label>Battery Consumption Month</label>
+                <description>Amount of energy  consumed from battery this month</description>
+            </channel>
+            <channel id="selfConsumptionToday" typeId="percent">
+                <label>Today’s self-consumption rate</label>
+                <description>Displays rate of the consumed energy amount from system today</description>
+            </channel>
+            <channel id="co2ReductionMonth" typeId="mass">
+                <label>This month's CO2 reduction</label>
+                <description>Displays the monthly amount of CO2 reduction</description>
+            </channel>
+            <channel id="pcsStatus" typeId="string">
+                <label>PCS Status</label>
+                <description>Displays the status of the Power Conditioning System</description>
+            </channel>
+            <channel id="gridFeedInLimitation" typeId="percent">
+                <label>Grid Feed-In Limitation</label>
+                <description>Displays the feed-in limitation to the grid</description>
+            </channel>
+            <channel id="pcsOperationMode" typeId="string">
+                <label>PCS Operation Mode</label>
+                <description>Displays the status of the Power Conditioning System</description>
+            </channel>
+        </channels>
+    </channel-group-type>
+</thing:thing-descriptions>

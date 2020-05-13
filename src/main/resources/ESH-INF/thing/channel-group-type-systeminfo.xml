@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<thing:thing-descriptions bindingId="lginverter"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:thing="https://openhab.org/schemas/thing-description/v1.0.0"
+	xsi:schemaLocation="https://openhab.org/schemas/thing-description/v1.0.0 https://openhab.org/schemas/thing-description-1.0.0.xsd">
+    <channel-group-type id="systemInfo" advanced="true">
+        <label>SystemInfo API</label>
+        <description>description #TBD</description>
+        <category>Energy</category>
+        <channels>
+            <channel id="pmsModel" typeId="string">
+                <label>PMS Model</label>
+                <description>Power Management System (PMS) model</description>
+            </channel>
+            <channel id="pmsSerial" typeId="string">
+                <label>PMS Serial Number</label>
+                <description>Power Management System (PMS) serial number</description>
+            </channel>
+            <channel id="pmsACPowerInput" typeId="power">
+                <label>PMS AC Input Power</label>
+                <description>Power Management System (PMS) AC input power</description>
+            </channel>
+            <channel id="pmsACPowerOutput" typeId="power">
+                <label>PMS AC Output Power</label>
+                <description>Power Management System (PMS) AC output power</description>
+            </channel>
+            <channel id="pmsInstallDate" typeId="string">
+                <label>PMS Install Date</label>
+                <description>Power Management System (PMS) install date</description>
+            </channel>
+            <channel id="batteryCapacity" typeId="percent">
+                <label>Battery Capacity</label>
+                <description>Battery Capacity</description>
+            </channel>
+            <channel id="batteryInstallDate" typeId="string">
+                <label>Battery Install Date</label>
+                <description>Battery install date</description>
+            </channel>
+            <channel id="pmsVersion" typeId="string">
+                <label>PMS Version</label>
+                <description>Power Management System (PMS) version</description>
+            </channel>
+            <channel id="pmsBuildDate" typeId="string">
+                <label>PMS Build Date</label>
+                <description>Power Management System (PMS) build date</description>
+            </channel>
+            <channel id="pcsVersion" typeId="string">
+                <label>PCS Version</label>
+                <description>Power Conversion Station (PCS) version</description>
+            </channel>
+            <channel id="bmsVersion" typeId="string">
+                <label>BMS Version</label>
+                <description>Battery Management System (BMS) version</description>
+            </channel>
+            <channel id="bmsUnit1Version" typeId="string">
+                <label>BMS Unit 1 Version</label>
+                <description>Battery Management System (BMS) unit 1 version</description>
+            </channel>
+            <channel id="bmsUnit2Version" typeId="string">
+                <label>BMS Unit 2 Version</label>
+                <description>Battery Management System (BMS) unit 2 version</description>
+            </channel>
+        </channels>
+    </channel-group-type>
+</thing:thing-descriptions>

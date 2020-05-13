@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<features xmlns="http://karaf.apache.org/xmlns/features/v1.6.0" name="org.openhab.binding.lginverter-2.5.3-SNAPSHOT">
+    <feature version="0.0.0">
+        <feature>openhab-runtime-base</feature>
+        <bundle>mvn:org.jmdns/jmdns/3.5.5</bundle>
+        <bundle>mvn:org.openhab.addons.bundles/org.openhab.binding.lginverter/2.5.3-SNAPSHOT</bundle>
+        <bundle>mvn:org.slf4j/slf4j-api/1.7.25</bundle>
+    </feature>
+</features>

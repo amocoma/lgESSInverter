@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config-description:config-descriptions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:config-description="https://openhab.org/schemas/config-description/v1.0.0"
+xsi:schemaLocation="https://openhab.org/schemas/config-description/v1.0.0 https://openhab.org/schemas/config-description-1.0.0.xsd">
+	<config-description uri="thing-type:lginverter_config">
+		
+		<parameter-group name="access">
+			<label>Inverter Access</label>
+			<description>Inverter Access</description>
+		</parameter-group>
+
+		<parameter-group name="apisToPoll" >
+			<label>API's to Poll</label>
+			<description>API's to poll</description>
+		</parameter-group>
+
+		<parameter-group name="refreshIntervals" >
+			<label>Refresh Intervals</label>
+			<description>Refresh Intervals</description>
+			<advanced>true</advanced>
+		</parameter-group>
+
+	<!-- SERIAL -->
+		<parameter name="serial" type="text" required="true" groupName="access">
+			<context>serial</context>
+			<label>Serial Number</label>
+			<description>Enter the serial number of the inverter</description>
+			<default>DE1907BKRE01633D</default>
+		</parameter>
+		<parameter name="ip" type="text" required="true" groupName="access">
+			<context>ip</context>
+			<label>IP</label>
+			<description></description>
+			<default>192.168.2.149</default>
+		</parameter>
+		<!-- PASSWORD -->
+		<parameter name="password" type="text" required="true" groupName="access">
+			<label>Password</label>
+			<context>password</context>
+			<description>Enter the inventer password here</description>
+		</parameter>
+		
+		<!-- VERSION -->
+		<parameter name="version" type="text" required="true" groupName="access">
+			<limitToOptions>true</limitToOptions>
+			<label>API Version</label>
+			<description>States how often a refresh shall occur (in s)</description>
+			<options>
+				<option value="V1">Version 1</option>
+			</options>
+			<default>V1</default>
+		</parameter>
+
+		<!-- BATTERY -->
+		<parameter name="useBatteryInformation" type="boolean" groupName="apisToPoll">
+			<label>Has the system a Battery attached?</label>
+			<description>States if a battery is attached to the system and the interface for battery information should be used.</description>
+			<default>true</default>
+		</parameter>
+		<parameter name="batteryRefreshInternalInSeconds" type="integer" required="true" unit="s" groupName="refreshIntervals">
+			<label>Refresh Interval for Battery Information</label>
+			<description>States how often a refresh shall occur (in s)</description>
+			<default>30</default>
+		</parameter>
+
+		<!-- COMMON -->
+		<parameter name="useCommonInformation" type="boolean" groupName="apisToPoll">
+			<label>Common Information</label>
+			<description>States if the common interface for information should be used.</description>
+			<default>true</default>
+		</parameter>
+		<parameter name="commonRefreshInternalInSeconds" type="integer" required="true" unit="s" groupName="refreshIntervals">
+			<label>Refresh Interval for Common Information</label>
+			<description>States how often a refresh shall occur (in s)</description>
+			<default>30</default>
+		</parameter>
+
+		<!-- HOME -->
+		<parameter name="useHomeInformation" type="boolean" groupName="apisToPoll">
+			<label>Home Information</label>
+			<description>States if the home interface for information should be used.</description>
+			<default>true</default>
+		</parameter>
+		<parameter name="homeRefreshInternalInSeconds" type="integer" required="true" unit="s" groupName="refreshIntervals">
+			<label>Refresh Interval for Home Information</label>
+			<description>States how often a refresh shall occur (in s)</description>
+			<default>30</default>
+		</parameter>
+
+		<!-- SYSTEM -->
+		<parameter name="useSystemInformation" type="boolean" groupName="apisToPoll">
+			<label>System Information</label>
+			<description>States if the system interface for information should be used.</description>
+			<default>true</default>
+		</parameter>
+		<parameter name="systemRefreshInternalInSeconds" type="integer" required="true" unit="s" groupName="refreshIntervals">
+			<label>Refresh Interval for System Information</label>
+			<description>States how often a refresh shall occur (in s)</description>
+			<default>30</default>
+		</parameter>
+
+		<!-- NETWORK -->
+		<parameter name="useNetworkInformation" type="boolean" groupName="apisToPoll">
+			<label>System Information</label>
+			<description>States if the network interface for information should be used.</description>
+			<default>true</default>
+		</parameter>
+		<parameter name="networkRefreshInternalInSeconds" type="integer" required="true" unit="s" groupName="refreshIntervals">
+			<label>Refresh Interval for Network Information</label>
+			<description>States how often a refresh shall occur (in s)</description>
+			<default>30</default>
+		</parameter>
+	</config-description>
+
+</config-description:config-descriptions>

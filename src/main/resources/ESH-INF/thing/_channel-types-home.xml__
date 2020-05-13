@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<thing:thing-descriptions bindingId="lginverter"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:thing="https://openhab.org/schemas/thing-description/v1.0.0"
+	xsi:schemaLocation="https://openhab.org/schemas/thing-description/v1.0.0 https://openhab.org/schemas/thing-description-1.0.0.xsd">
+
+	<!--
+		"statistics": {
+			"pcs_pv_total_power": "0",
+			"batconv_power": "0",
+			"bat_use": "0",
+			"bat_status": "off",
+			"bat_user_soc": "0.0",
+			"load_power": "534",
+			"load_power_for_ui": "534",
+			"ac_output_power": "10",
+			"load_today": "0.0",
+			"grid_power": "534",
+			"current_day_self_consumption": "85.5",
+			"current_pv_generation_sum": "6445",
+			"current_grid_feed_in_energy": "935"
+		},
+	-->
+
+	<!-- 
+		"pcs_pv_total_power": "0",
+		"batconv_power": "0",
+		"load_power": "534",
+		"load_power_for_ui": "534",
+		"ac_output_power": "10",
+		"grid_power": "534",
+	-->
+	<!-- "current_pv_generation_sum": "6445" -->
+	<channel-type id="homeStatisticsPower" advanced="true">
+		<item-type>Number:Energy</item-type>
+		<label>Home Statistics Diverse Power Stats</label>
+		<description>Home Statistics Diverse Power Stats</description>
+		<category>Energy</category>
+		<state readOnly="true" pattern="%.2f %unit%"/>
+	</channel-type>
+
+
+	<!-- "bat_use": "0" -->
+	<channel-type id="homeStatisticsBatteryUse" advanced="true">
+		<item-type>String</item-type>
+		<label>Home Statistics Battery Use</label>
+		<description>Home Statistics Battery Use</description>
+		<category>Energy</category>
+		<state readOnly="true"/>
+	</channel-type>
+
+	<!-- "bat_status": "off" -->
+	<channel-type id="homeStatisticsBatteryStatus" advanced="true">
+		<item-type>Switch</item-type>
+		<label>Home Statistics Battery Status</label>
+		<description>Home Statistics Battery Status</description>
+		<category>Energy</category>
+		<state readOnly="true"/>
+	</channel-type>
+
+	<!-- "bat_user_soc": "0.0" -->
+	<channel-type id="homeStatisticsBatteryUserSOC" advanced="true">
+		<item-type>Number:Dimensionless</item-type>
+		<label>Home Statistics Battery User SOC</label>
+		<description>Home Statistics Battery User SOC</description>
+		<category>Energy</category>
+		<state readOnly="true" pattern="%.2f %unit%"/>
+	</channel-type>
+
+	<!-- "current_day_self_consumption": "85.5" -->
+	<channel-type id="homeStatisticsSelfConsumptionDay" advanced="true">
+		<item-type>Number:Dimensionless</item-type>
+		<label>Home Statistics Self Consumption Day</label>
+		<description>ome Statistics Self Consumption Day</description>
+		<category>Energy</category>
+		<state readOnly="true" pattern="%.2f %unit%"/>
+	</channel-type>
+
+	<!-- "current_pv_generation_sum": "6445" -->
+	<channel-type id="homeStatisticsPVGeneration" advanced="true">
+		<item-type>Number:Energy</item-type>
+		<label>Home Statistics PV Generation</label>
+		<description>Home Statistics PV Generation</description>
+		<category>Energy</category>
+		<state readOnly="true" pattern="%.2f %unit%"/>
+	</channel-type>
+
+	<!-- "current_grid_feed_in_energy": "935" -->
+	<channel-type id="homeStatisticsGridFeedIn" advanced="true">
+		<item-type>Number:Energy</item-type>
+		<label>Home Statistics Grid Feed In</label>
+		<description>Home Statistics Grid Feed In</description>
+		<category>Energy</category>
+		<state readOnly="true" pattern="%.2f %unit%"/>
+	</channel-type>
+
+	<!--
+		"direction": {
+			"is_direct_consuming_": "0",
+			"is_battery_charging_": "0",
+			"is_battery_discharging_": "0",
+			"is_grid_selling_": "0",
+			"is_grid_buying_": "1",
+			"is_charging_from_grid_": "0",
+			"is_discharging_to_grid_": "0"
+		},
+	-->
+	<channel-type id="homeDirection" advanced="true">
+		<item-type>Switch</item-type>
+		<label>Home Diverse Directions</label>
+		<description>Home Diverse Directions</description>
+		<category>Energy</category>
+		<state readOnly="true"/>
+	</channel-type>
+	
+	<!--
+      "operation": {
+        "status": "start",
+        "mode": "2",
+        "pcs_standbymode": "false"
+	  },
+	-->
+
+	<!-- "status": "start" -->
+	<channel-type id="homeOperationStatus" advanced="true">
+		<item-type>String</item-type>
+		<label>Home Operation Status</label>
+		<description>Home Operation Status</description>
+		<category>Energy</category>
+		<state readOnly="true"/>
+	</channel-type>
+	
+	<!-- mode": "2" -->
+	<channel-type id="homeOperationMode" advanced="true">
+		<item-type>String</item-type>
+		<label>Home Operation Mode</label>
+		<description>Home Operation Mode</description>
+		<category>Energy</category>
+		<state readOnly="true"/>
+	</channel-type>	
+
+	<!-- "pcs_standbymode": "false" -->
+	<channel-type id="homeOperationPCSStandby" advanced="true">
+		<item-type>Switch</item-type>
+		<label>Home Operation PCS Standby Mode</label>
+		<description>Home Operation PCS Standby Mode</description>
+		<category>Energy</category>
+		<state readOnly="true"/>
+	</channel-type>
+	
+	<!--
+      "wintermode": {
+        "winter_status": "off",
+        "backup_status": "off"
+	  },
+	-->
+
+	<!--  "winter_status": "off" -->
+	<channel-type id="homeWinterMode" advanced="true">
+		<item-type>Switch</item-type>
+		<label>Home Winter Mode Status</label>
+		<description>Home Winter Mode Status</description>
+		<category>Energy</category>
+		<state readOnly="true"/>
+	</channel-type>
+
+	<!-- "backup_status": "off" -->
+	<channel-type id="homeWinterModeBackup" advanced="true">
+		<item-type>Switch</item-type>
+		<label>Home Winter Mode Backup Status</label>
+		<description>Home Winter Mode Backup Status</description>
+		<category>Energy</category>
+		<state readOnly="true"/>
+	</channel-type>
+	
+	<!-- backupmode": "" -->
+	<channel-type id="homeBackupMode" advanced="true">
+		<item-type>String</item-type>
+		<label>Home Backup Mode</label>
+		<description>Home Backup Mode</description>
+		<category>Energy</category>
+		<state readOnly="true"/>
+	</channel-type>
+
+	<!--
+      "pcs_fault": {
+        "pcs_status": "pcs_ok"
+	  },
+	-->
+	<!-- "pcs_status": "pcs_ok" -->
+	<channel-type id="homePCSStatus" advanced="true">
+		<item-type>String</item-type>
+		<label>Home PCS Status</label>
+		<description>Home PCS Status</description>
+		<category>Energy</category>
+		<state readOnly="true"/>
+	</channel-type>
+	
+	<!--
+      "heatpump": {
+        "heatpump_activate": "off",
+        "current_temp": "0",
+        "heatpump_enable": "off"
+	  },
+	-->
+	
+	<!-- "heatpump_activate": "off" -->
+	<channel-type id="homeHeatpumpActivate" advanced="true">
+		<item-type>Switch</item-type>
+		<label>Home Heatpump Avtivate</label>
+		<description>Home Heatpump Avtivate</description>
+		<category>Energy</category>
+		<state readOnly="true"/>
+	</channel-type>
+
+	<!-- "current_temp": "0" -->
+	<channel-type id="homeHeatpumpTemperature" advanced="true">
+		<item-type>Number:Temperature</item-type>
+		<label>Home Heatpump Temperature</label>
+		<description>Home Heatpump Temperature</description>
+		<category>Energy</category>
+		<state readOnly="true" pattern="%.2f %unit%"/>
+	</channel-type>
+
+	<!-- "heatpump_enable": "off" -->
+	<channel-type id="homeHeatpumpEnable" advanced="true">
+		<item-type>Switch</item-type>
+		<label>Home Heatpump Enable</label>
+		<description>Home Heatpump Enable</description>
+		<category>Energy</category>
+		<state readOnly="true"/>
+	</channel-type>
+	
+	<!--
+      "evcharger": {
+        "ev_activate": "off",
+        "ev_power": "0"
+	  },
+	-->
+	
+	<!-- "ev_activate": "off" -->
+	<channel-type id="homeEvChargerActivate" advanced="true">
+		<item-type>Switch</item-type>
+		<label>Home EV-Charger Activate</label>
+		<description>Home EV-Charger Activate</description>
+		<category>Energy</category>
+		<state readOnly="true"/>
+	</channel-type>
+
+	<!-- "ev_power": "0" -->
+	<channel-type id="homeEvChargerPower" advanced="true">
+		<item-type>Number:Energy</item-type>
+		<label>Home EV-Charger Power</label>
+		<description>Home EV-Charger Power</description>
+		<category>Energy</category>
+		<state readOnly="true" pattern="%.2f %unit%"/>
+	</channel-type>
+
+	<!--
+	  "gridWaitingTime": "0"
+	-->
+	<channel-type id="homeGridWaitingTime" advanced="true">
+		<item-type>Number</item-type>
+		<label>Home Grid Waiting Time</label>
+		<description>Home Grid Waiting Time</description>
+		<category>Energy</category>
+		<state readOnly="true"/>
+	</channel-type>
+</thing:thing-descriptions>
